@@ -1,0 +1,49 @@
+1.全局安装vue-cli
+
+```
+cnpm install --global vue-cli
+```
+2.进入项目目录安装工作文件
+
+```
+vue init webpack test
+```
+然后完成一些初始选选择
+
+3.进入工作目录，安装相关依赖
+
+```
+cd test
+
+cnpm install
+```
+4.修改端口号
+
+```
+在config/index.js中找到  8080  改成自己希望的端口号（毕竟这个端口号太常用，很有可能冲突）
+```
+5.运行项目
+
+```
+npm run dev
+```
+
+6.修改公共资源路径
+
+```
+在config/index.js中找到 build选项将其中的
+
+assetsPublicPath: '/',
+
+改为
+
+assetsPublicPath: './',
+```
+
+7.构建项目
+
+```
+npm run build
+```
+
+然后直接打开dist目录下的index.html也可以跑起来，项目依赖在dist目录下
