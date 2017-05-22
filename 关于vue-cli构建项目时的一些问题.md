@@ -3,7 +3,7 @@
 只要启动
 
 ```
-nmp run dev
+npm run dev
 ```
 已经是热加载了
 
@@ -12,3 +12,24 @@ nmp run dev
 在项目根目录新建一个文件夹如static，在下面存放公共静态资源
 
 在根目录的index.html中用常规方法引入（估计大概可能是酱紫？）
+
+3.如何使用scss或者其他css预编译？
+
+貌似在项目初始化时已经配置好了scss，但还没有安装，所以只要执行以下命令
+
+```
+$ cnpm install node-sass sass-loader --save-dev
+
+```
+然后在vue组件中写的style的部分这样写
+
+```
+<style lang="scss" scoped>
+.main {
+  font-weight: normal;
+  p{
+    font-size:18px;
+  }
+}
+</style>
+```
